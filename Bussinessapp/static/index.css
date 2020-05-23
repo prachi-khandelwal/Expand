@@ -1,3 +1,4 @@
-.nav > li > a:hover{
-    background-color:yellow;
+
+ul li:hover {
+  background-color: #FF6869;
 }
