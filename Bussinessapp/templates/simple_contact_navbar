@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="nav">
+      <a class="nav-link disabled" href="#"><i class="fas fa-phone-alt"></i>&nbsp;Call Now:</a>
+      <a class="nav-link active" href="tel:9982035408">+91-99-820-35-408</a>
+      <a class="nav-link disabled" href="#"><i class="far fa-comments"></i>&nbsp;Email: </a>
+      <a class="nav-link active" href="mailto:khandelwalfancystore01@gmail.com">khandelwalfancystore@gmail.com</a>
+      <div class="nav justify-content-end">
+      <a class="nav-link active justify-content-end" data-toggle="tooltip " data-placement="bottom" title="Facebook" href="https://facebook.com" ><i class="fab fa-facebook-f"></i></a>
+      <a class="nav-link active justify-content-end" data-toggle="tooltip" data-placement="bottom" title="Whatsapp" href="https://api.whatsapp.com/send?phone=919982035408" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+</nav>
