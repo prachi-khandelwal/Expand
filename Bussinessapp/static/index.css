@@ -1,4 +1,12 @@
 
 ul li:hover {
-  background-color: #FF6869;
+  background-color: #f5c542;
+  font-weight: 900;
+
+
+}
+ul li{
+  font-family: Helvetica;
+  padding: 12px;
+  font-variant: small-caps;
 }
