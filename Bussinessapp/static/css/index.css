@@ -1,0 +1,57 @@
+
+/* FOR THE STYLING OF NAVBAR TEXT */
+ul li:hover {
+  background-color: #f5c542;
+  font-weight: 900;
+
+
+}
+ul li{
+  font-family: Helvetica;
+  padding: 12px;
+  font-variant: small-caps;
+}
+
+/* FOR THE SPEED DELAYS OF CAROUSEL CONTENT */
+.carousel-indicators {
+    bottom: 0;
+}
+.carousel-control.right,
+.carousel-control.left {
+    background-image: none;
+}
+.carousel-item {
+    min-height: 50px;
+    height: 50%;
+    width:50px;
+}
+.carousel-caption h3,
+.carousel .icon-container,
+.carousel-caption button {
+    background: #66000000;
+    padding : .3em
+
+}
+.carousel-caption h3 {
+    padding: 0.1em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: oblique;
+    font-size: 22px;
+}
+
+.carousel-caption button {
+    border-color: red;
+    margin-top: 1em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Animation delays */
+.carousel-caption h3:first-child {
+    animation-delay: 1s;
+}
+.carousel-caption h3:nth-child(2) {
+    animation-delay: 2s;
+}
+.carousel-caption button {
+    animation-delay: 2s;
+}
