@@ -2,11 +2,20 @@
 {% load static %}
 <html lang="en" dir="ltr">
   <head>
+
     <meta charset="utf-8">
     <title>Khandelwal Store</title>
 
     <!-- CSS file link -->
-    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+
+    <!-- js file link -->
+    <script  type="text/javascript" src="{% static 'index.js' %}">
+
+    </script>
+
+    <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Lobster&family=Montserrat&family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
 
     <!-- Font awesome library -->
     <script src="https://kit.fontawesome.com/569aa1fca8.js" crossorigin="anonymous"></script>
@@ -17,6 +26,7 @@
 
 
     <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -34,18 +44,19 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Khandelwal Trophy's</a>
+  <a class="navbar-brand" href="{% url 'index' %}">Khandelwal Trophy's</a>
 
+    <!-- NAVBAR ITEMS TO BE COLLAPSED -->
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#" aria-disabled="true">Products</a>
+        <a class="nav-link active" href="{% url 'Bussinessapp:products'  %}" aria-disabled="true">Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+        <a class="nav-link active" href="{% url 'Bussinessapp:contact_us' %}" tabindex="-1" aria-disabled="true">Contact Us</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -53,11 +64,23 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+  <div class="justify-content-end navbar-brand">
+    <ul class="navbar-nav inline">
+      <li class="nav-item active"><a data-toggle="tooltip" data-placement="bottom" title="Call" href="tel:9982035408"><i class="fas fa-phone-alt"></i></a></li>
+      <li class="nav-item active"><a data-toggle="tooltip" data-placement="bottom" title="Email" href="mailto:khandelwalfancystore01@gmail.com"><i class="far fa-comments"></i></a></li>
+      <li class="nav-item active"><a data-toggle="tooltip" data-placement="bottom" title="Facebook" href="https://facebook.com" ><i class="fab fa-facebook-f"></i></a></li>
+      <li class="nav-item active"><a data-toggle="tooltip" data-placement="bottom" title="Whatsapp" href="https://api.whatsapp.com/send?phone=919982035408" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
 </nav>
     </nav>
+    <!-- NAVBAR ENDS -->
   </header>
 
   <body>
+    {% block body_block %}
+
+    {% endblock %}
 
 
 

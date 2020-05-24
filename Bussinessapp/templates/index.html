@@ -1,36 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
-
 <!-- CAROUSEL SLIDER -->
+
+
+<!-- INDICATORS -->
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+
   </ol>
+  <!-- first slide -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="{% static 'images/trophy1.jpg' %}" class="d-block w-100" alt="..." style="height:450px;width:100%">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3 class="animate__animated animate__lightSpeedInRight">We Export High Quality of Products</h3>
+        <button type="button" name="Button" href="{% url 'Bussinessapp:products' %}">View Products</button>
+
       </div>
     </div>
+    <!-- second slide -->
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="{% static 'images/trophy2.jpg' %}" class="d-block w-100" alt="..." style="height:450px;width:100%">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3 class="animate__animated animate__lightSpeedInRight">Alwar's Best Stop Shop For Trophy's!</h3>
+        <h3 class="animate__animated animate__lightSpeedInRight">Acrylic Trophy, Fibre Trophy etc</h3>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
+
   </div>
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,5 +40,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+
+
 
 {% endblock %}
